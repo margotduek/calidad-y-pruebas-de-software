@@ -1,0 +1,42 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+string get_word(string w, int abc);
+int main(){
+  ifstream dictionary;
+  dictionary.open("diccionario.txt");
+  bool find = false;
+  int i = 0;
+  string word;
+  string mixed_word = "RLCOPY";
+  int abc = 0;
+  string dict_word;
+  if(dictionary.is_open()){
+    cout << "si" << endl;
+  }
+  while(!find){
+    getline(dictionary,dict_word );
+    word = get_word(mixed_word, abc);
+    if(word == dict_word){
+      find = true;
+      cout << word << endl;
+      return 0;
+    }
+    cout << "busca" << endl;
+    abc ++;
+    i ++;
+  }
+  cout << "no existe" << endl;
+  return 0;
+}
+
+string get_word(string w, int abc){
+  string word;
+  for(int i = 0; i < w.length(); i++){
+    word += w[i]+abc;
+  }
+  cout << "estoy buscando" << endl;
+  return word;
+}
