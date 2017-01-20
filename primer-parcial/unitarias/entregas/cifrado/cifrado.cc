@@ -17,13 +17,14 @@ int main(){
     cout << "si" << endl;
   }
   while(!find){
-    getline(dictionary,dict_word );
+    getline(dictionary, dict_word);
     word = get_word(mixed_word, abc);
     if(word == dict_word){
       find = true;
       cout << word << endl;
       return 0;
     }
+    // cout << "busca" << endl;
     abc ++;
     i ++;
   }
@@ -36,5 +37,6 @@ string get_word(string w, int abc){
   for(int i = 0; i < w.length(); i++){
     word += w[i]+abc;
   }
+  //cout << "estoy buscando" << endl;
   return word;
 }

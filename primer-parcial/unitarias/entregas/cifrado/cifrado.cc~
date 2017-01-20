@@ -24,7 +24,7 @@ int main(){
       cout << word << endl;
       return 0;
     }
-    cout << "busca" << endl;
+    // cout << "busca" << endl;
     abc ++;
     i ++;
   }
@@ -37,6 +37,6 @@ string get_word(string w, int abc){
   for(int i = 0; i < w.length(); i++){
     word += w[i]+abc;
   }
-  cout << "estoy buscando" << endl;
+  //cout << "estoy buscando" << endl;
   return word;
 }
