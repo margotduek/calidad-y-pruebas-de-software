@@ -34,9 +34,16 @@ int main(){
 
 string get_word(string w, int abc){
   string word;
+  char a = 'a';
+  for(int i = 0; i < ; i++){
+    a = w[0] + i;
+    cout << a << endl;
+  }
   for(int i = 0; i < w.length(); i++){
     word += w[i]+abc;
   }
-  //cout << "estoy buscando" << endl;
+  if(word == "GARDEN"){
+    cout << word << endl;
+  }
   return word;
 }
